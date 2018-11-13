@@ -1,5 +1,5 @@
 <?php
-$db_con = new SQLite3('bed_en_breakfest.db');
+$db_con = new SQLite3('database/bed_en_breakfest.db');
 $reslult  = $db_con->query('select * from kamers');
 $reslult2  = $db_con->query('select * from ExtraOpties');
 
