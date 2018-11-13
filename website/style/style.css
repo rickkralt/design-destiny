@@ -1,0 +1,38 @@
+body {
+    padding-top: 56px;
+}
+
+.jumbotron {
+    background: #ffdd99 !important;
+}
+
+.contact-btn {
+    background: #ffaa00;
+    color: white;
+}
+
+.contact-btn:hover {
+    background: #e69900;
+    color: white;
+}
+
+.footer {
+    height: 120px;
+    background: #e69900;
+}
+
+.footer-info {
+    padding-top: 25px;
+}
+
+.footer-info li {
+    list-style: none;
+}
+
+.footer-info-right {
+    margin-right: 50px;
+}
+
+.fab {
+    font-size: 25px;
+}
