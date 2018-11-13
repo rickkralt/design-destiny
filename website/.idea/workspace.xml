@@ -11,14 +11,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="db_con_test.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db_con_test.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db_con_test.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
-              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <caret line="11" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="7" />
               <folding>
                 <marker date="1542114109276" expanded="true" signature="89:109" ph="select * fro... kamers" />
                 <marker date="1542114109276" expanded="true" signature="142:167" ph="select * fro... ExtraOpties" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Foto_test.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Foto_test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+              <folding>
+                <marker date="1542121042040" expanded="true" signature="89:109" ph="select * fro... kamers" />
+                <marker date="1542121042040" expanded="true" signature="142:167" ph="select * fro... ExtraOpties" />
               </folding>
             </state>
           </provider>
@@ -44,12 +57,33 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reserveren.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reserveren/reserveren.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-27">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/db_con_test.php" />
+        <option value="$PROJECT_DIR$/Foto_test.php" />
       </list>
     </option>
   </component>
@@ -107,6 +141,11 @@
               <item name="website" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="reserveren" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="website" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="style" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -147,15 +186,15 @@
       <workItem from="1542096761401" duration="2902000" />
       <workItem from="1542099882937" duration="681000" />
       <workItem from="1542101651408" duration="2351000" />
-      <workItem from="1542114084983" duration="26000" />
+      <workItem from="1542114084983" duration="2571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5960000" />
+    <option name="totallyTimeSpent" value="8505000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1014" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1014" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13258786" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -239,6 +278,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/style/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reserveren/reserveren.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/contact/contact.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -250,10 +305,21 @@
     <entry file="file://$PROJECT_DIR$/db_con_test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <caret line="11" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="7" />
           <folding>
             <marker date="1542114109276" expanded="true" signature="89:109" ph="select * fro... kamers" />
             <marker date="1542114109276" expanded="true" signature="142:167" ph="select * fro... ExtraOpties" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foto_test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding>
+            <marker date="1542121042040" expanded="true" signature="89:109" ph="select * fro... kamers" />
+            <marker date="1542121042040" expanded="true" signature="142:167" ph="select * fro... ExtraOpties" />
           </folding>
         </state>
       </provider>
