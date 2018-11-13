@@ -10,6 +10,7 @@ $reslult2  = $db_con->query('select * from ExtraOpties');
     <title>Dit is een test!</title>
 </head>
 <body>
+    <h1>Kamers</h1>
     <table>
         <tr>
             <th>ID</th>
@@ -25,6 +26,7 @@ $reslult2  = $db_con->query('select * from ExtraOpties');
         ?>
     </table><br/>
     <hr/>
+    <h1>Extra opties</h1>
     <table>
         <tr>
             <th>ID</th>

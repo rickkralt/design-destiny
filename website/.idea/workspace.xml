@@ -14,11 +14,11 @@
       <file leaf-file-name="db_con_test.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db_con_test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="897">
-              <caret line="39" column="12" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+            <state relative-caret-position="506">
+              <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
               <folding>
-                <marker date="1542103180501" expanded="true" signature="80:100" ph="select * fro... kamers" />
-                <marker date="1542103180501" expanded="true" signature="133:158" ph="select * fro... ExtraOpties" />
+                <marker date="1542103398262" expanded="true" signature="80:100" ph="select * fro... kamers" />
+                <marker date="1542103398262" expanded="true" signature="133:158" ph="select * fro... ExtraOpties" />
               </folding>
             </state>
           </provider>
@@ -131,15 +131,15 @@
       <updated>1542096760265</updated>
       <workItem from="1542096761401" duration="2902000" />
       <workItem from="1542099882937" duration="681000" />
-      <workItem from="1542101651408" duration="1534000" />
+      <workItem from="1542101651408" duration="1681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5117000" />
+    <option name="totallyTimeSpent" value="5264000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="984" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="984" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13125764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -179,8 +179,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1542103180501" expanded="true" signature="80:100" ph="select * fro... kamers" />
-            <marker date="1542103180501" expanded="true" signature="133:158" ph="select * fro... ExtraOpties" />
+            <marker date="1542103398262" expanded="true" signature="80:100" ph="select * fro... kamers" />
+            <marker date="1542103398262" expanded="true" signature="133:158" ph="select * fro... ExtraOpties" />
           </folding>
         </state>
       </provider>
@@ -190,19 +190,19 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1542103180501" expanded="true" signature="80:100" ph="select * fro... kamers" />
-            <marker date="1542103180501" expanded="true" signature="133:158" ph="select * fro... ExtraOpties" />
+            <marker date="1542103398262" expanded="true" signature="80:100" ph="select * fro... kamers" />
+            <marker date="1542103398262" expanded="true" signature="133:158" ph="select * fro... ExtraOpties" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db_con_test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="39" column="12" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        <state relative-caret-position="506">
+          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
           <folding>
-            <marker date="1542103180501" expanded="true" signature="80:100" ph="select * fro... kamers" />
-            <marker date="1542103180501" expanded="true" signature="133:158" ph="select * fro... ExtraOpties" />
+            <marker date="1542103398262" expanded="true" signature="80:100" ph="select * fro... kamers" />
+            <marker date="1542103398262" expanded="true" signature="133:158" ph="select * fro... ExtraOpties" />
           </folding>
         </state>
       </provider>
