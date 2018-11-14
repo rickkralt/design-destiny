@@ -1,7 +1,8 @@
 <?php
 $db_con = new SQLite3('../database/bed_en_breakfest.db');
 $reslult_kamers  = $db_con->query('select * from kamers');
-$reslult_extraopties_ontbijt  = $db_con->query('select * from ExtraOpties where extraopties_id < 3');
+$reslult_extraopties_ontbijtNL  = $db_con->query('select * from ExtraOpties where extraopties_id < 2');
+$reslult_extraopties_ontbijtEN  = $db_con->query('select * from ExtraOpties where extraopties_id > 1 and extraopties_id < 3');
 $reslult_extraopties = $db_con->query('select * from ExtraOpties where extraopties_id > 3');
 
 ?>
@@ -45,7 +46,7 @@ $reslult_extraopties = $db_con->query('select * from ExtraOpties where extraopti
 <div class="container">
     <div class="row">
         <?php
-        
+
         while ($row = $reslult_kamers->fetchArray() ){
             $row = (object) $row;
             echo "<div class=\"col-sm\">";
@@ -64,13 +65,17 @@ $reslult_extraopties = $db_con->query('select * from ExtraOpties where extraopti
             echo "Prijs: € " . $row->kamer_prijs;
             echo "<br>";
             echo "<h5 class=\"card-title\">Extra opties:</h5>";
-            while ($row2 = $reslult_extraopties_ontbijt->fetchArray() ) {
+            while ($row2 = $reslult_extraopties_ontbijtNL->fetchArray() ) {
                 $row2 = (object)$row2;
                 echo "<input type=\"radio\" name=\"ontbijt\" value=\"ontbijt_nl\" checked> ".$row2->extraopties_naam." + € ".$row2->extraopties_prijs."<br>";
             }
-            while ($row3 = $reslult_extraopties->fetchArray() ) {
-                $row3= (object)$row3;
-                echo "<input type=\"checkbox\" name=\"ontbijt\" value=\"ontbijt_nl\" checked> ".$row3->extraopties_naam." + € ".$row3->extraopties_prijs."<br>";
+            while ($row3 = $reslult_extraopties_ontbijtEN->fetchArray() ) {
+                $row3 = (object)$row3;
+                echo "<input type=\"radio\" name=\"ontbijt\" value=\"ontbijt_nl\"> ".$row3->extraopties_naam." + € ".$row3->extraopties_prijs."<br>";
+            }
+            while ($row4 = $reslult_extraopties->fetchArray() ) {
+                $row4= (object)$row4;
+                echo "<input type=\"checkbox\" name=\"ontbijt\" value=\"ontbijt_nl\" checked> ".$row4->extraopties_naam." + € ".$row4->extraopties_prijs."<br>";
             }
             echo "<br>";
             echo "<button type=\"button\" class=\"btn btn-lg btn-info btn-bereken\">Boek!</button>";
