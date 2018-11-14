@@ -36,3 +36,12 @@ body {
 .fab {
     font-size: 25px;
 }
+
+.card {
+    height: 100%;
+}
+
+.btn-bereken {
+    display: block !important;
+    margin: auto;
+}
