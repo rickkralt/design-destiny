@@ -27,8 +27,8 @@
       <file leaf-file-name="reseveren.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reserveren/reseveren.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="73" column="81" lean-forward="false" selection-start-line="73" selection-start-column="81" selection-end-line="73" selection-end-column="81" />
+            <state relative-caret-position="851">
+              <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
               <folding>
                 <marker date="1542196425318" expanded="true" signature="99:119" ph="select * fro... kamers" />
                 <marker date="1542196425318" expanded="true" signature="173:222" ph="select * fro... ExtraOpties" />
@@ -202,12 +202,12 @@
       <workItem from="1542101651408" duration="2351000" />
       <workItem from="1542114084983" duration="2571000" />
       <workItem from="1542187318713" duration="2090000" />
-      <workItem from="1542192022304" duration="4068000" />
+      <workItem from="1542192022304" duration="4447000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14663000" />
+    <option name="totallyTimeSpent" value="15042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="984" extended-state="6" />
@@ -453,8 +453,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reserveren/reseveren.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="73" column="81" lean-forward="false" selection-start-line="73" selection-start-column="81" selection-end-line="73" selection-end-column="81" />
+        <state relative-caret-position="851">
+          <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
           <folding>
             <marker date="1542196425318" expanded="true" signature="99:119" ph="select * fro... kamers" />
             <marker date="1542196425318" expanded="true" signature="173:222" ph="select * fro... ExtraOpties" />
