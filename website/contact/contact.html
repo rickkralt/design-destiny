@@ -11,7 +11,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Menu</a>
+        <div class="navbar-brand">Menu</div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,7 +29,36 @@
             </ul>
         </div>
     </nav>
-
+    <br>
+    <div class="container">
+        <h1 class="text-center">Contactformulier</h1>
+        <hr>
+    </div>
+    <br>
+    <div class="container container-contact">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="label-naam">Naam</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Naam" aria-describedby="label-naam">
+        </div>
+        
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="label-email">Email adres</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Email adres" aria-describedby="label-email">
+        </div>
+        
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Vraag/opmerking</span>
+            </div>
+            <textarea class="form-control" aria-label="Vraag/opmerking"></textarea>
+        </div>
+        <button type="button" class="btn btn-secondary btn-lg">Verstuur</button>
+    </div>
+    <br>
     <footer class="footer">
         <div class="container-fluid footer-info">
             <div class="row">

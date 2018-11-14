@@ -1,5 +1,8 @@
 body {
     padding-top: 56px;
+    position: relative;
+    min-height: 100vh !important;
+    padding-bottom: 120px;
 }
 
 .jumbotron {
@@ -19,6 +22,9 @@ body {
 .footer {
     height: 120px;
     background: #e69900;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-info {
@@ -46,7 +52,7 @@ body {
     margin: auto;
 }
 
-.res_container {
-    display: block !important;
-    margin: auto;
+.container-contact {
+    width: 50% !important;
 }
+
