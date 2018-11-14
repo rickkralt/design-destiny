@@ -15,7 +15,7 @@ $reslult2  = $db_con->query('select * from ExtraOpties');
     while ($row = $reslult2->fetchArray() ){
         $row = (object) $row;
         echo "<tr><td>".$row->extraopties_id."</td><td>".$row->extraopties_naam."</td><td>".$row->extraopties_prijs."</td></tr>";
-        echo ""
+        echo "";
     }
     ?>
 </body>
