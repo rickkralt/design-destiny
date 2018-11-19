@@ -40,5 +40,7 @@ $reslult2  = $db_con->query('select * from ExtraOpties');
         }
         ?>
     </table>
+    <hr/>
+    <?php for ($x = 1; $x <= 5; $x++) { echo $x; } ?>
 </body>
 </html>

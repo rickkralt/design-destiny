@@ -46,92 +46,43 @@ $reslult_extraopties = $db_con->query('select * from ExtraOpties where extraopti
 <div class="container">
     <div class="row">
         <?php
-
         while ($row = $reslult_kamers->fetchArray() ){
-            $row = (object) $row;
-            echo "<div class=\"col-sm\">";
-            echo "<div class=\"card\" style=\"width: 18rem;\">";
-            echo "<img class=\"card-img-top\" src=\"../img/slideshow1.jpg\" alt=\"Card image cap\">";
-            echo "<div class=\"card-body\">";
-            echo "<h5 class=\"card-title\">". $row->kamer_naam ."</h5>";
-            echo "<p class=\"card-text\">";
-
-            echo "Personen: " . $row->kamer_personen."<br>";
-            echo "Plaats: " . $row->kamer_plaats."<br>";
-            echo "<br>";
-            echo "Beschijving: <br>";
-            echo $row->kamer_beschrijving."<br>";
-            echo "<br>";
-            echo "Prijs: € " . $row->kamer_prijs;
-            echo "<br>";
-            echo "<h5 class=\"card-title\">Extra opties:</h5>";
-            while ($row2 = $reslult_extraopties_ontbijtNL->fetchArray() ) {
-                $row2 = (object)$row2;
-                echo "<input type=\"radio\" name=\"ontbijt\" value=\"ontbijt_nl\" checked> ".$row2->extraopties_naam." + € ".$row2->extraopties_prijs."<br>";
-            }
-            while ($row3 = $reslult_extraopties_ontbijtEN->fetchArray() ) {
-                $row3 = (object)$row3;
-                echo "<input type=\"radio\" name=\"ontbijt\" value=\"ontbijt_nl\"> ".$row3->extraopties_naam." + € ".$row3->extraopties_prijs."<br>";
-            }
-            while ($row4 = $reslult_extraopties->fetchArray() ) {
-                $row4= (object)$row4;
-                echo "<input type=\"checkbox\" name=\"ontbijt\" value=\"ontbijt_nl\" checked> ".$row4->extraopties_naam." + € ".$row4->extraopties_prijs."<br>";
-            }
-            echo "<br>";
-            echo "<button type=\"button\" class=\"btn btn-lg btn-info btn-bereken\">Boek!</button>";
-
-
-            echo "</p>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-        }
-        ?>
-
-        <!--
+            $row = (object) $row; ?>
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="../img/slideshow1.jpg" alt="Card image cap">
+                <img class="card-img-top" src="../img/slideshow/Eenpersoonskamer_f1.jpg" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Kamer opties</h5>
+                    <h5 class="card-title"><?php $row->kamer_naam ?></h5>
                     <p class="card-text">
-                        <input type="checkbox" name="kamer" value="eenpersoonskamer"> Eenpersoonskamer - €74,50<br>
-                        <input type="checkbox" name="kamer" value="tweepersoonskamer1"> Tweepersoonskamer (twee aparte bedden) - €80,50<br>
-                        <input type="checkbox" name="kamer" value="tweepersoonskamer2"> Tweepersoonskamer <br> (één groot bed) - €84,50<br>
-                        <input type="checkbox" name="kamer" value="grotekamer"> Grote kamer - €90,00<br>
-                        <input type="checkbox" name="kamer" value="gezinskamer"> Gezinskamer - €95,00<br>
+                        <?php
+                        echo "Personen: " . $row->kamer_personen."<br>";
+                        echo "Plaats: " . $row->kamer_plaats."<br>";
+                        echo "<br>";
+                        echo "Beschijving: <br>";
+                        echo $row->kamer_beschrijving."<br>";
+                        echo "<br>";
+                        echo "Prijs: € " . $row->kamer_prijs;
+                        echo "<br>";
+                        echo "<h5 class=\"card-title\">Extra opties:</h5>";
+                        while ($row2 = $reslult_extraopties_ontbijtNL->fetchArray() ) {
+                            $row2 = (object)$row2;
+                            echo "<input type=\"radio\" name=\"ontbijt\" value=\"ontbijt_nl\" checked> ".$row2->extraopties_naam." + € ".$row2->extraopties_prijs."<br>";
+                        }
+                        while ($row3 = $reslult_extraopties_ontbijtEN->fetchArray() ) {
+                            $row3 = (object)$row3;
+                            echo "<input type=\"radio\" name=\"ontbijt\" value=\"ontbijt_nl\"> ".$row3->extraopties_naam." + € ".$row3->extraopties_prijs."<br>";
+                        }
+                        while ($row4 = $reslult_extraopties->fetchArray() ) {
+                            $row4= (object)$row4;
+                            echo "<input type=\"checkbox\" name=\"ontbijt\" value=\"ontbijt_nl\" checked> ".$row4->extraopties_naam." + € ".$row4->extraopties_prijs."<br>";
+                        } ?>
+                        <br>
+                        <button type="button" class="btn btn-lg btn-info btn-bereken" value='<?php for ($x = 1; $x <= 5; $x++) { echo $x; } ?>' href="reseveren_klantgegevens.html">Boek!</button>
                     </p>
                 </div>
             </div>
         </div>
-
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="../img/ontbijt.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Ontbijt opties</h5>
-                    <p class="card-text">
-                        <input type="radio" name="ontbijt" value="ontbijt_nl" checked> Nederlands ontbijt - gratis<br>
-                        <input type="radio" name="ontbijt" value="ontbijt_en"> Brits ontbijt - €15,00<br>
-                        <input type="checkbox" name="ontbijt" value="ontbijtopkamer"> Ontbijt op kamer - €7,50<br>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="../img/krant.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Extra opties</h5>
-                    <p class="card-text">
-                        <input type="checkbox" name="extra" value="ochtendkrant"> Ochtendkrant - €1,00<br>
-                        <input type="checkbox" name="extra" value="wifi"> Wifi - €2,00<br>
-                    </p>
-                </div>
-            </div>
-        </div>
-        -->
+        <?php } ?>
     </div>
 </div>
 <br>
