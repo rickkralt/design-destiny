@@ -36,27 +36,29 @@
     </div>
     <br>
     <div class="container container-contact">
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="label-naam">Naam</span>
+        <form action="stuurbericht.php" method="post">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="label-naam">Naam</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Naam" aria-describedby="label-naam">
             </div>
-            <input type="text" class="form-control" aria-label="Naam" aria-describedby="label-naam">
-        </div>
-        
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="label-email">Email adres</span>
+            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="label-email">Email adres</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Email adres" aria-describedby="label-email">
             </div>
-            <input type="text" class="form-control" aria-label="Email adres" aria-describedby="label-email">
-        </div>
-        
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Vraag/opmerking</span>
+            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Vraag/opmerking</span>
+                </div>
+                <textarea class="form-control" aria-label="Vraag/opmerking"></textarea>
             </div>
-            <textarea class="form-control" aria-label="Vraag/opmerking"></textarea>
-        </div>
-        <button type="button" class="btn btn-secondary btn-lg">Verstuur</button>
+            <button type="button" class="btn btn-secondary btn-lg">Verstuur</button>
+        </form>
     </div>
     <br>
     <footer class="footer">
