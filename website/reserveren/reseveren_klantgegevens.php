@@ -1,5 +1,36 @@
 <?php
+if (empty($_GET['ontbijdopbed'])){
+    $OntbijOpBedPrijs = 0.00;
+}
+else{
+    $OntbijOpBedPrijs = 7.50;
+}
+if (empty($_GET['krant'])){
+    $KrantPrijs = 0.00;
+}
+else{
+    $KrantPrijs = 1.00;
+}
+if (empty($_GET['wifi'])){
+    $WifiPrijs = 0.00;
+}
+else{
+    $WifiPrijs = 2.00;
+}
+
 $ButtonValue = $_GET['submit'];
+$Ontbijt = $_GET['ontbijt'];
+$GeldEinde = ',00';
+
+if($Ontbijt == 1) {
+    $OntbijtPrijs = 0.00;
+}
+elseif($Ontbijt == 2) {
+    $OntbijtPrijs = 15.00;
+}
+
+error_reporting(0);
+
 
 $db_con = new SQLite3('../database/bed_en_breakfest.db');
 $reslult = $db_con->query("SELECT * FROM kamers WHERE kamer_id = '$ButtonValue'");
@@ -41,9 +72,21 @@ $reslult = $db_con->query("SELECT * FROM kamers WHERE kamer_id = '$ButtonValue'"
 <div class="container rekentool">
     <h1 class="text-center">U heeft deze keuze gemaakt:</h1>
     <hr>
-    Hier komen de opties + prijs
-    <br><br>
-    Totaalbedrag onderaan
+    <?php while ($row = $reslult->fetchArray() ){ $row = (object) $row; ?>
+        <h5 class="card-title"><?php echo $row->kamer_naam; ?></h5>
+        <label>Personen: <?php echo $row->kamer_personen; ?></label><br>
+        <label>Plaats: <?php echo $row->kamer_plaats; ?></label><br>
+        <?php $KamerPrijs = $row->kamer_prijs; ?>
+        <br>
+        <label>Ontbijt prijs: € <?php echo money_format('%(#1n', $OntbijtPrijs) ?></label><br>
+        <label>Ontbijd op bed prijs: € <?php echo money_format('%(#1n', $OntbijOpBedPrijs) ?></label><br>
+        <label>Krant prijs: € <?php echo money_format('%(#1n', $KrantPrijs) ?></label><br>
+        <label>Wifi prijs: € <?php echo money_format('%(#1n', $WifiPrijs) ?></label><br>
+        <label>Kamer prijs: € <?php echo money_format('%(#1n', $KamerPrijs) ?></label><br>
+        <br>
+        <?php $TotaalPrijs = $KamerPrijs + $OntbijOpBedPrijs + $KrantPrijs + $WifiPrijs + $OntbijtPrijs; ?>
+        <label>Totaal prijs: € <?php echo money_format('%(#1n', $TotaalPrijs) ?></label><br>
+    <?php } ?>
 </div>
 <br>
 <div class="container">
