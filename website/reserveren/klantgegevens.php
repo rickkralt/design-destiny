@@ -1,7 +1,7 @@
 <?php
 //error_reporting(0);
 
-include_once ('reseveren_klantgegevens.php');
+include ('reseveren_klantgegevens.php');
 
 $db_con = new SQLite3('../database/bed_en_breakfest.db');
 
