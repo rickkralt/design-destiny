@@ -2,6 +2,7 @@
 $db_con = new SQLite3('database/bed_en_breakfest.db');
 $reslult  = $db_con->query('select * from kamers');
 $reslult2  = $db_con->query('select * from ExtraOpties');
+$reslult3  = $db_con->query('select * from Resevering');
 
 ?>
 <!DOCTYPE html>
@@ -41,6 +42,21 @@ $reslult2  = $db_con->query('select * from ExtraOpties');
         ?>
     </table>
     <hr/>
-    <?php for ($x = 1; $x <= 5; $x++) { echo $x; } ?>
+    <h1>Reseveringen</h1>
+    <table>
+        <tr>
+            <th>Voornaam</th>
+            <th>Achternaam</th>
+            <th>Datum komst</th>
+            <th>Datum vertrek</th>
+        </tr>
+        <?php
+        while ($row = $reslult3->fetchArray() ){
+            $row = (object) $row;
+            echo "<tr><td>".$row->resevering_klant_voornaam."</td><td>".$row->resevering_klant_achternaam."</td><td>".$row->resevering_datumkomst."</td><td>".$row->resevering_datumvertrek."</td></tr>";
+        }
+        ?>
+    </table>
+
 </body>
 </html>

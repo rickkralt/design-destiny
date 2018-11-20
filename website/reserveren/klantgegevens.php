@@ -20,4 +20,6 @@ $query_string = "INSERT INTO Resevering (resevering_id, resevering_klant_voornaa
 
 $result = $db_con->query($query_string);
 
-echo "<script>window.location = 'overzicht.php'</script>";
+echo "<script type='text/javascript'>alert('Je hebt succesvol geboekt!');</script>";
+echo "<script>window.location = '../home/home.html'</script>";
+?>
