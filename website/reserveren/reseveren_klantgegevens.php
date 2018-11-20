@@ -46,7 +46,9 @@ $ressult = $db_con->query("SELECT * FROM kamers WHERE kamer_id = '$ButtonValue'"
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="navbar-brand">Menu</div>
+    <a class="navbar-brand" href="../home/home.html">
+        <img src="../../Bed & Breakfest logo/B&B logo.jpg" width="50" height="50" alt="">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
