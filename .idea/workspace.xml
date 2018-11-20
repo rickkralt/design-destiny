@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a68b79f5-5ce2-45af-9dc5-4a747436fb36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/website/reserveren/reserveren.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/reserveren/reserveren.html" afterDir="false" />
-    </list>
+    <list default="true" id="a68b79f5-5ce2-45af-9dc5-4a747436fb36" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,20 +45,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/reserveren/reserveren.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="1921">
               <caret line="176" column="81" selection-start-line="176" selection-start-column="81" selection-end-line="176" selection-end-column="81" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/contact/contact.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/website/reserveren/reseveren_klantgegevens.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="14" column="83" selection-start-line="14" selection-start-column="83" selection-end-line="14" selection-end-column="83" />
+            <state relative-caret-position="425">
+              <caret line="85" column="87" selection-start-line="85" selection-start-column="87" selection-end-line="85" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -86,6 +84,7 @@
         <option value="$PROJECT_DIR$/website/contact/contact.html" />
         <option value="$PROJECT_DIR$/website/style/style.css" />
         <option value="$PROJECT_DIR$/website/reserveren/reserveren.html" />
+        <option value="$PROJECT_DIR$/website/reserveren/reseveren_klantgegevens.php" />
       </list>
     </option>
   </component>
@@ -123,6 +122,12 @@
               <item name="design-destiny" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
               <item name="contact" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="design-destiny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="design-destiny" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="design-destiny" type="b2602c69:ProjectViewProjectNode" />
@@ -176,7 +181,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="719000" />
+    <option name="totallyTimeSpent" value="728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -233,7 +238,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/website/reserveren/reserveren.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="1921">
           <caret line="176" column="81" selection-start-line="176" selection-start-column="81" selection-end-line="176" selection-end-column="81" />
         </state>
       </provider>
