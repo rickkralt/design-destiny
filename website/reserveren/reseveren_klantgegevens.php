@@ -31,7 +31,7 @@ elseif($Ontbijt == 2) {
 }
 
 $db_con = new SQLite3('../database/bed_en_breakfest.db');
-$reslult = $db_con->query("SELECT * FROM kamers WHERE kamer_id = '$ButtonValue'");
+$ressult = $db_con->query("SELECT * FROM kamers WHERE kamer_id = '$ButtonValue'");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,7 +70,7 @@ $reslult = $db_con->query("SELECT * FROM kamers WHERE kamer_id = '$ButtonValue'"
 <div class="container rekentool">
     <h1 class="text-center">U heeft deze keuze gemaakt:</h1>
     <hr>
-    <?php while ($row = $reslult->fetchArray() ){ $row = (object) $row; ?>
+    <?php while ($row = $ressult->fetchArray() ){ $row = (object) $row; ?>
         <h5 class="card-title"><?php echo $row->kamer_naam; ?></h5>
         <label>Personen: <?php echo $row->kamer_personen; ?></label><br>
         <label>Plaats: <?php echo $row->kamer_plaats; ?></label><br>

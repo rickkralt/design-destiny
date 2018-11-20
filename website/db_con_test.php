@@ -1,8 +1,8 @@
 <?php
 $db_con = new SQLite3('database/bed_en_breakfest.db');
-$reslult  = $db_con->query('select * from kamers');
-$reslult2  = $db_con->query('select * from ExtraOpties');
-$reslult3  = $db_con->query('select * from Resevering');
+$result  = $db_con->query('select * from kamers');
+$result2  = $db_con->query('select * from ExtraOpties');
+$result3  = $db_con->query('select * from Resevering');
 
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ $reslult3  = $db_con->query('select * from Resevering');
             <th>Prijs</th>
         </tr>
         <?php
-        while ($row = $reslult->fetchArray() ){
+        while ($row = $result->fetchArray() ){
             $row = (object) $row;
             echo "<tr><td>".$row->kamer_id."</td><td>".$row->kamer_personen."</td><td>".$row->kamer_naam."</td><td>".$row->kamer_prijs."</td></tr>";
         }
@@ -35,7 +35,7 @@ $reslult3  = $db_con->query('select * from Resevering');
             <th>Prijs</th>
         </tr>
         <?php
-        while ($row = $reslult2->fetchArray() ){
+        while ($row = $result2->fetchArray() ){
             $row = (object) $row;
             echo "<tr><td>".$row->extraopties_id."</td><td>".$row->extraopties_naam."</td><td>".$row->extraopties_prijs."</td></tr>";
         }
@@ -51,7 +51,7 @@ $reslult3  = $db_con->query('select * from Resevering');
             <th>Datum vertrek</th>
         </tr>
         <?php
-        while ($row = $reslult3->fetchArray() ){
+        while ($row = $result3->fetchArray() ){
             $row = (object) $row;
             echo "<tr><td>".$row->resevering_klant_voornaam."</td><td>".$row->resevering_klant_achternaam."</td><td>".$row->resevering_datumkomst."</td><td>".$row->resevering_datumvertrek."</td></tr>";
         }
