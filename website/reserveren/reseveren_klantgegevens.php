@@ -1,4 +1,6 @@
 <?php
+//error_reporting(0);
+
 if (empty($_GET['ontbijdopbed'])){
     $OntbijOpBedPrijs = 0.00;
 }
@@ -20,7 +22,6 @@ else{
 
 $ButtonValue = $_GET['submit'];
 $Ontbijt = $_GET['ontbijt'];
-$GeldEinde = ',00';
 
 if($Ontbijt == 1) {
     $OntbijtPrijs = 0.00;
@@ -28,9 +29,6 @@ if($Ontbijt == 1) {
 elseif($Ontbijt == 2) {
     $OntbijtPrijs = 15.00;
 }
-
-error_reporting(0);
-
 
 $db_con = new SQLite3('../database/bed_en_breakfest.db');
 $reslult = $db_con->query("SELECT * FROM kamers WHERE kamer_id = '$ButtonValue'");

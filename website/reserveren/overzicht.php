@@ -1,5 +1,5 @@
 <?php
-$db_con = new SQLite3('database/bed_en_breakfest.db');
+$db_con = new SQLite3('../database/bed_en_breakfest.db');
 $reslult  = $db_con->query('select * from Resevering');
 
 while ($row = $reslult->fetchArray() ){
