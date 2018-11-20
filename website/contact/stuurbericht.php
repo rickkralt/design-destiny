@@ -1,6 +1,7 @@
 <?php
 //error_reporting(0);
 
+
 $db_con = new SQLite3('../database/bed_en_breakfest.db');
 
 $naam = $_POST['naam'];
