@@ -42,7 +42,7 @@ $ressult = $db_con->query("SELECT * FROM kamers WHERE kamer_id = '$ButtonValue'"
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <title>Home</title>
+    <title>*TEST* Reseveren</title>
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -73,97 +73,123 @@ $ressult = $db_con->query("SELECT * FROM kamers WHERE kamer_id = '$ButtonValue'"
     <h1 class="text-center">U heeft deze keuze gemaakt:</h1>
     <hr>
     <?php while ($row = $ressult->fetchArray() ){ $row = (object) $row; ?>
-        <h5 class="card-title"><?php echo $row->kamer_naam; ?></h5>
-        <label>Personen: <?php echo $row->kamer_personen; ?></label><br>
-        <label>Plaats: <?php echo $row->kamer_plaats; ?></label><br>
-        <?php $KamerPrijs = $row->kamer_prijs; ?>
+    <h5 class="card-title"><?php echo $row->kamer_naam; ?></h5>
+    <label>Personen: <?php echo $row->kamer_personen; ?></label><br>
+    <label>Plaats: <?php echo $row->kamer_plaats; ?></label><br>
+    <?php $KamerPrijs = $row->kamer_prijs; ?>
+    <br>
+    <form action="klantgegevens.php" method="get">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="label-ontbijt">Ontbijt:</span>
+            </div>
+            <input type="text" class="form-control" aria-label="ontbijtprijs" aria-describedby="label-ontbijtprijs" name="ontbijtprijs" value="€ <?php echo number_format($OntbijtPrijs, 2, ',', '') ?>" readonly>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="label-voornaam">Ontbijt op bed:</span>
+            </div>
+            <input type="text" class="form-control" aria-label="ontbijtopbed" aria-describedby="label-ontbijtopbed" name="ontbijtopbed" value="€ <?php echo number_format($OntbijOpBedPrijs, 2, ',', '') ?>" readonly>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="label-voornaam">Ochtend krant:</span>
+            </div>
+            <input type="text" class="form-control" aria-label="ochtentkrant" aria-describedby="label-ochtentkrant" name="ochtentkrant" value="€ <?php echo number_format($KrantPrijs, 2, ',', '') ?>" readonly>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="label-voornaam">Wifi:</span>
+            </div>
+            <input type="text" class="form-control" aria-label="wifi" aria-describedby="label-wifi" name="wifi" value="€ <?php echo number_format($WifiPrijs, 2, ',', '') ?>" readonly>
+        </div>
         <br>
-        <label>Ontbijt prijs: € <?php echo number_format($OntbijtPrijs, 2, ',', '') ?></label><br>
-        <label>Ontbijd op bed prijs: € <?php echo number_format($OntbijOpBedPrijs, 2, ',', '') ?></label><br>
-        <label>Krant prijs: € <?php echo number_format($KrantPrijs, 2, ',', '') ?></label><br>
-        <label>Wifi prijs: € <?php echo number_format($WifiPrijs, 2, ',', '') ?></label><br>
-        <label>Kamer prijs: € <?php echo number_format($KamerPrijs, 2, ',', '') ?></label><br>
-        <br>
-        <?php $TotaalPrijs = $KamerPrijs + $OntbijOpBedPrijs + $KrantPrijs + $WifiPrijs + $OntbijtPrijs; ?>
-        <label>Totaal prijs: € <?php echo number_format($TotaalPrijs, 2, ',', '') ?></label><br>
-    <?php } ?>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="label-voornaam">Totaal:</span>
+            </div>
+            <input type="text" class="form-control" aria-label="totaal" aria-describedby="label-totaal" name="totaal" value="€ <?php echo number_format($KamerPrijs, 2, ',', '') ?>" readonly>
+        </div>
+        <?php } ?>
 </div>
 <br>
 <div class="container">
     <h1 class="text-center">Klantgegevens</h1>
     <hr>
-    <form action="klantgegevens.php" method="get">
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="label-begindatum">Begindatum</span>
-            </div>
-            <input type="date" class="form-control" aria-label="begindatum" aria-describedby="label-begindatum" name="begindatum">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="label-begindatum">Begindatum</span>
         </div>
+        <input type="date" class="form-control" aria-label="begindatum" aria-describedby="label-begindatum" name="begindatum">
+    </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="label-einddatum">Einddatum</span>
-            </div>
-            <input type="date" class="form-control" aria-label="einddatum" aria-describedby="label-einddatum" name="einddatum">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="label-einddatum">Einddatum</span>
         </div>
+        <input type="date" class="form-control" aria-label="einddatum" aria-describedby="label-einddatum" name="einddatum">
+    </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="label-voornaam">Voornaam</span>
-            </div>
-            <input type="text" class="form-control" aria-label="voornaam" aria-describedby="label-voornaam" name="voornaam">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="label-voornaam">Voornaam</span>
         </div>
+        <input type="text" class="form-control" aria-label="voornaam" aria-describedby="label-voornaam" name="voornaam">
+    </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="label-achternaam">Achternaam</span>
-            </div>
-            <input type="text" class="form-control" aria-label="achternaam" aria-describedby="label-achternaam" name="achternaam">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="label-achternaam">Achternaam</span>
         </div>
+        <input type="text" class="form-control" aria-label="achternaam" aria-describedby="label-achternaam" name="achternaam">
+    </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="label-email">Email</span>
-            </div>
-            <input type="email" class="form-control" aria-label="email" aria-describedby="label-email" name="email">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="label-email">Email</span>
         </div>
+        <input type="email" class="form-control" aria-label="email" aria-describedby="label-email" name="email">
+    </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="label-telefoonnummer">Telefoonnummer</span>
-            </div>
-            <input type="text" class="form-control" aria-label="telefoonnummer" aria-describedby="label-telefoonnummer" name="telefoonnummer">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="label-telefoonnummer">Telefoonnummer</span>
         </div>
+        <input type="text" class="form-control" aria-label="telefoonnummer" aria-describedby="label-telefoonnummer" name="telefoonnummer">
+    </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="label-adres">Adres</span>
-            </div>
-            <input type="text" class="form-control" aria-label="adres" aria-describedby="label-adres" name="adres">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="label-adres">Adres</span>
         </div>
+        <input type="text" class="form-control" aria-label="adres" aria-describedby="label-adres" name="adres">
+    </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="label-postcode">Postcode</span>
-            </div>
-            <input type="text" class="form-control" aria-label="postcode" aria-describedby="label-postcode" name="postcode">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="label-postcode">Postcode</span>
         </div>
+        <input type="text" class="form-control" aria-label="postcode" aria-describedby="label-postcode" name="postcode">
+    </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="label-plaats">Plaats</span>
-            </div>
-            <input type="text" class="form-control" aria-label="plaats" aria-describedby="label-plaats" name="plaats">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="label-plaats">Plaats</span>
         </div>
+        <input type="text" class="form-control" aria-label="plaats" aria-describedby="label-plaats" name="plaats">
+    </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="label-opmerking">Opmerking</span>
-            </div>
-            <input type="text" class="form-control" aria-label="opmerking" aria-describedby="label-opmerking" name="opmerking">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="label-opmerking">Opmerking</span>
         </div>
+        <input type="text" class="form-control" aria-label="opmerking" aria-describedby="label-opmerking" name="opmerking">
+    </div>
 
-        <input class="btn btn-lg btn-secondary btn-bereken" type="submit" name="verzenden" value="Verzenden">
+    <input class="btn btn-lg btn-secondary btn-bereken" type="submit" name="verzenden" value="Verzenden">
 
     </form>
 </div>
