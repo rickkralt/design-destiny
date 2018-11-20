@@ -57,6 +57,5 @@ $result3  = $db_con->query('select * from Resevering');
         }
         ?>
     </table>
-
 </body>
 </html>
